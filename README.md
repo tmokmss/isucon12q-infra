@@ -17,10 +17,10 @@ Host *
 # register ssh key
 # https://github.com/settings/ssh/new
 
-git clone git@github.com:tmokmss/isucon11q-infra.git
+git clone git@github.com:tmokmss/isucon12q-infra.git
 
-git config --global user.email "isucon@example.com"
-git config --global user.name "isucon"
+git config --global user.email "tomookam@example.com"
+git config --global user.name "tmokmss"
 ```
 
 ### setup other servers
@@ -32,9 +32,9 @@ scp /home/isucon/.ssh/config isu2:~/.ssh
 scp /home/isucon/.ssh/id_ed25519* isu2:~/.ssh
 
 mv ~/webapp ~/webapp_bak
-git clone git@github.com:tmokmss/isucon11q-app.git webapp
+git clone git@github.com:tmokmss/isucon12q-app.git webapp
 
-git clone git@github.com:tmokmss/isucon11q-infra.git
+git clone git@github.com:tmokmss/isucon12q-infra.git
 make init
 ```
 
@@ -79,12 +79,7 @@ sudo less /var/log/nginx
 
 journalctl -u isuumo.ruby -f
 journalctl -xe
-journalctl -u isuumo.ruby
-
-stackprof tmp/stackprof-cpu-*
-stackprof tmp/stackprof-cpu-* --method "block in <class:App>"
 ```
-
 
 ### ssh portforwarding
 
