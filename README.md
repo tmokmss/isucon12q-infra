@@ -13,13 +13,15 @@ vim ~/.ssh/config
 Host *
   AddKeysToAgent yes
   IdentityFile ~/.ssh/id_ed25519
+```
 
-# register ssh key
-# https://github.com/settings/ssh/new
+register ssh key here:
+https://github.com/settings/ssh/new
 
+```
 git clone git@github.com:tmokmss/isucon12q-infra.git
 
-git config --global user.email "tomookam@example.com"
+git config --global user.email "tomookam@example.jp"
 git config --global user.name "tmokmss"
 ```
 
