@@ -51,7 +51,7 @@ mss:
 	sudo mysqldumpslow -s t -t 20
 
 reset-log:
-	sudo rm /var/log/mysql/mariadb-slow.log || true
+	sudo rm /var/log/mysql/mysql-slow.log || true
 	sudo rm /var/log/nginx/access.log || true
 	make db
 	make nginx
