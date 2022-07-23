@@ -45,7 +45,7 @@ alp:
 	sudo cat /var/log/nginx/access.log | alp ltsv -m '/api/condition/.*','/isu/.*/condition','/isu/.*/graph','/api/isu/.*/icon','/api/isu/.*','/isu/.*','/assets/.*'
 
 ptq:
-	sudo pt-query-digest --limit 10 /var/log/mysql/mariadb-slow.log
+	sudo pt-query-digest --limit 10 /var/log/mysql/mysql-slow.log
 
 mss:
 	sudo mysqldumpslow -s t -t 20
