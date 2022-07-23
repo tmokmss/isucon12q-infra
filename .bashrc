@@ -115,29 +115,7 @@ if ! shopt -oq posix; then
     . /etc/bash_completion
   fi
 fi
-# BEGIN ANSIBLE MANAGED BLOCK go
-export PATH=/home/isucon/local/go/bin:/home/isucon/go/bin:$PATH
-export GOROOT=/home/isucon/local/go
-# END ANSIBLE MANAGED BLOCK go
-# BEGIN ANSIBLE MANAGED BLOCK nodejs
-export PATH=/home/isucon/local/node/bin:$PATH
-# END ANSIBLE MANAGED BLOCK nodejs
-# BEGIN ANSIBLE MANAGED BLOCK perl
-export PATH=/home/isucon/local/perl/bin:$PATH
-# END ANSIBLE MANAGED BLOCK perl
-# BEGIN ANSIBLE MANAGED BLOCK php
-export PATH=/home/isucon/local/php/bin:$PATH
-# END ANSIBLE MANAGED BLOCK php
-# BEGIN ANSIBLE MANAGED BLOCK python
-export PATH=/home/isucon/local/python/bin:$PATH
-# END ANSIBLE MANAGED BLOCK python
-# BEGIN ANSIBLE MANAGED BLOCK Ruby
-export PATH=/home/isucon/local/ruby/bin:$PATH
-# END ANSIBLE MANAGED BLOCK Ruby
-. "$HOME/.cargo/env"
-# BEGIN ANSIBLE MANAGED BLOCK Rust
-export PATH=/home/isucon/.cargo/bin:$PATH
-# END ANSIBLE MANAGED BLOCK Rust
+
 
 parse_git_branch() {
      git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/(\1)/'
