@@ -48,11 +48,6 @@ sudo ln -s /etc/apparmor.d/usr.sbin.mysqld /etc/apparmor.d/disable/
 sudo apparmor_parser -R /etc/apparmor.d/disable/usr.sbin.mysqld
 ```
 
-### check mysql version
-```
-SHOW VARIABLES LIKE ‘%version%’;
-```
-
 ### setup alp
 ```
 cd ~/
@@ -95,6 +90,9 @@ ssh -L localhost:8080:localhost:80 ec2-user@13.0.0.30
 # forward multiple ports using alias
 ssh -L localhost:8080:172.31.6.60:80 -L localhost:3306:172.31.6.60:3306 ec2
 ssh -L localhost:8080:localhost:3000 -L localhost:3306:localhost:3306 isu1
+
+# need root privilege to forward well-known ports
+sudo ssh -N -i /Users/xxx/.ssh/id_ed25519 -L443:localhost:443 isucon@isu
 ```
 
 ### create MySQL user that one can connect from any cidr
